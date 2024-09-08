@@ -41,7 +41,7 @@ double askForUserInput(){
 
     //prints entered points
     printf("Point #1 entered: x1 = %0.3f; y1 = %0.3f\n", x1, y1);
-    printf("Point #1 entered: x2 = %0.3f; y2 = %0.3f\n", x2, y2);
+    printf("Point #2 entered: x2 = %0.3f; y2 = %0.3f\n", x2, y2);
 
     //excecutes distance formula using given points
     double input = distanceFormula(x1, x2, y1, y2);
