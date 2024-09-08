@@ -17,22 +17,11 @@ Output: (to the command line) points and calculations
 #define PI 3.14159
 
 
-//helper function to print
-void printEP1(double x1, double y1){
-    printf("Point #1 entered: x1 = %0.3f; y1 = %0.3f\n", x1, y1);
-}
-
-//helper function to print
-void printEP2(double x2, double y2){
-    printf("Point #1 entered: x2 = %0.3f; y2 = %0.3f\n", x2, y2);
-}
-
 //helper function to calculate distance
 double distanceFormula(double x1, double x2, double y1, double y2){
     double formula = sqrt((pow((x2 - x1),2)) + (pow((y2 - y1),2)));
     return formula;
 }
-
 
 //funtion to get input from the user
 double askForUserInput(){
@@ -43,14 +32,16 @@ double askForUserInput(){
     scanf("%lf", &x1);
     printf("Enter y1: ");
     scanf("%lf", &y1);
-    printEP1(x1, y1);
 
     //gets point 2 coordinates and prints them
     printf("Enter x2: ");
     scanf("%lf", &x2);
     printf("Enter y2: ");
     scanf("%lf", &y2);
-    printEP2(x2, y2);
+
+    //prints entered points
+    printf("Point #1 entered: x1 = %0.3f; y1 = %0.3f\n", x1, y1);
+    printf("Point #1 entered: x2 = %0.3f; y2 = %0.3f\n", x2, y2);
 
     //excecutes distance formula using given points
     double input = distanceFormula(x1, x2, y1, y2);
@@ -71,7 +62,7 @@ double calculatePerimeter(){
     double perimeter = PI * distance;
     printf("The perimeter of the city encompassed by your request is %.3lf\n", perimeter);
     
-    return 2;
+    return 2.0;
 }
 
 //function to calculate the area of the circle given the diameter
@@ -81,7 +72,7 @@ double calculateArea(){
     double area = PI * radius * radius;
     printf("The area of the city encompassed by your request is %.3lf\n", area);
     
-    return 3;
+    return 3.0;
 }
 
 //function to calculate width of the circle given the diameter
@@ -90,7 +81,7 @@ double calculateWidth(){
     double width = distance;
     printf("The width of the city encompassed by your request is %.3lf\n", width);   
    
-    return 1;
+    return 1.0;
 }
 
 //function to calculate the height of the circle given the diameter
@@ -99,7 +90,7 @@ double calculateHeight(){
     double height = distance;
     printf("The height of the city encompassed by your request is %.3lf\n", height);
     
-    return 1;
+    return 1.0;
 }
 
 //main function that calls other funtions
